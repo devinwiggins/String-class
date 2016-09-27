@@ -84,21 +84,76 @@ void MyString::ToLower()
 	for (int i = 0; i < Size(); i++)
 		// i is supposed to go through the string checking each letter
 	{
-		if (m_word[i] >= 'A' && m_word[i] <= 'Z')
-
-			m_word[i] += 32;
-
+		m_word[i] += 32;
+	}
 			// this is supposed to return the value of 
 			// the letter that i's address is equal to, plus 32.
 			// the 32 takes the ascii character's place value on the ascii table
 			// and adds it by 32 in order to match its lowercase counterpart
-	}
 }
 void MyString::ToUpper()
 {
 	for (int i = 0; i < Size(); i++)
 	{
-		if (m_word[i] <= 'z' && m_word[i] >= 'z')
-			m_word[i] -= 32;
+		(char)m_word[i] = (int)m_word[i] + 32;
 	}
 }
+
+bool MyString::findSub(MyString sub)
+{
+	int i = 0;
+	for (int it = 0; it < sub.Size() && i != ' '; it++)
+	{
+		for (i; i < Size(); i++)
+		{
+			if (m_word[i] == ' ')
+			{
+				continue;
+			}
+			if (m_word[i] == sub.m_word[it])
+			{
+				break;
+			}
+		}
+		if (m_word[i] != sub.m_word[it] && m_word[i] == '\0')
+			{
+				return false;
+			}
+	}
+	return true;
+}
+bool MyString::findIndexSub(int Index, MyString sub)
+{
+	int it = 0;
+	{
+		for (int i = Index; i < Size() && i != ' '; i++)// increments i to check continuous character spaces unless it 
+			//hits a space character
+		{
+			if (m_word[i] == sub.m_word[it])
+			{
+				it++;
+				continue;
+			}
+			
+			if (m_word[i] != sub.m_word[it] && sub.m_word[it] != '\0') // if the letter do not match at any point it returns false
+																		// null character check statement cannot be executed if it is false
+			{
+				return false;
+			}
+			if (sub.m_word[it] == '\0')// after full check if the words are equal the loop breaks and returns true
+			{
+				break;
+			}
+		}
+	}
+	return true;
+	// this function will return true or false whether the argument string is the sub string specified by Index
+}
+char MyString::changeSub(MyString swtch)
+{
+	return 0;
+}
+void MyString::ToC_str()
+{
+
+};

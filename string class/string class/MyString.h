@@ -17,7 +17,10 @@ public:
 	const char* ToConstant(); // returns the object as a constant character 
 	void ToLower(); //converts the object string to a lowercase version of itself
 	void ToUpper(); //converts the object string to a lowercase version of itself
-	char findSub();
+	bool findSub(MyString sub); //checks if argument string is within object string
+	bool findIndexSub(int Index, MyString sub); //checks if sub string exists by index
+	char changeSub(MyString swtch);
+	void ToC_str();
 };
 
 
