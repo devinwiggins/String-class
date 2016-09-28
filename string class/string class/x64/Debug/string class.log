@@ -1,14 +1,4 @@
-﻿Build started 9/27/2016 5:15:21 PM.
-     1>Project "C:\Users\devin.wiggins\Documents\GitHub\String-class\string class\string class\string class.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt MyString.cpp
-         MyString.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\devin.wiggins\Documents\GitHub\String-class\string class\x64\Debug\string class.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\devin.wiggins\Documents\GitHub\String-class\string class\x64\Debug\string class.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\devin.wiggins\Documents\GitHub\String-class\string class\x64\Debug\string class.lib" /MACHINE:X64 x64\Debug\Main.obj
-         x64\Debug\MyString.obj
-         string class.vcxproj -> C:\Users\devin.wiggins\Documents\GitHub\String-class\string class\x64\Debug\string class.exe
-     1>Done Building Project "C:\Users\devin.wiggins\Documents\GitHub\String-class\string class\string class\string class.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:00.62
+﻿  MyString.cpp
+c:\users\devin.wiggins\documents\github\string-class\string class\string class\mystring.cpp(17): warning C4552: '!=': operator has no effect; expected operator with side-effect
+  string class.vcxproj -> C:\Users\devin.wiggins\Documents\GitHub\String-class\string class\x64\Debug\string class.exe
+  string class.vcxproj -> C:\Users\devin.wiggins\Documents\GitHub\String-class\string class\x64\Debug\string class.pdb (Full PDB)

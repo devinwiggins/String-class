@@ -2,7 +2,7 @@
 class MyString
 {
 private:
-	char* m_word;
+	char m_word[255];
 public:
 	//Todo
 	MyString() {};
@@ -19,8 +19,6 @@ public:
 	void ToUpper(); //converts the object string to a lowercase version of itself
 	bool findSub(MyString sub); //checks if argument string is within object string
 	bool findIndexSub(int Index, MyString sub); //checks if sub string exists by index
-	char changeSub(MyString swtch);
-	void ToC_str();
 };
 
 

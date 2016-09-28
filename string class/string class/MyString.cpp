@@ -4,7 +4,16 @@
 
 MyString::MyString(char *a)
 {
-	m_word = a;
+	int i;
+	int len = 0;
+	while (a[len] != '\0')
+	{
+		len++;
+	}
+	for (i = 0; i < len; i++)
+	{
+		m_word[i] = a[i];
+	}
 }
 int MyString::Size()
 {
@@ -75,7 +84,7 @@ char* MyString::Prepend(MyString tac)
 	}
 	return arr;
 }
-const char * MyString::ToConstant()
+const char* MyString::ToConstant()
 {
 	return m_word;
 }
@@ -84,7 +93,12 @@ void MyString::ToLower()
 	for (int i = 0; i < Size(); i++)
 		// i is supposed to go through the string checking each letter
 	{
-		m_word[i] += 32;
+		if (m_word[i] >= 'A' && m_word[i] <= 'Z')
+		{
+			m_word[i] = (int)m_word[i] + 32;
+		}
+		else
+			break;
 	}
 			// this is supposed to return the value of 
 			// the letter that i's address is equal to, plus 32.
@@ -95,7 +109,12 @@ void MyString::ToUpper()
 {
 	for (int i = 0; i < Size(); i++)
 	{
-		(char)m_word[i] = (int)m_word[i] + 32;
+		if (m_word[i] >= 'a' && m_word[i] <= 'z')
+		{
+			m_word[i] = (int)m_word[i] + 32;
+		}
+		else
+			break;
 	}
 }
 
@@ -106,16 +125,20 @@ bool MyString::findSub(MyString sub)
 	{
 		for (i; i < Size(); i++)
 		{
-			if (m_word[i] == ' ')
+			if (m_word[i] == ' ') // this probably is redundant but it basically skips check
+								  // of space characters
 			{
 				continue;
 			}
-			if (m_word[i] == sub.m_word[it])
+			if (m_word[i] == sub.m_word[it]) // if the characters match the nested for loop 
+											 // is broken and the outer for loop continues
 			{
 				break;
 			}
 		}
-		if (m_word[i] != sub.m_word[it] && m_word[i] == '\0')
+		if (m_word[i] != sub.m_word[it] && m_word[i] == '\0') // if the string has ended and the
+															// string was not found it returns
+														   // false
 			{
 				return false;
 			}
@@ -127,7 +150,7 @@ bool MyString::findIndexSub(int Index, MyString sub)
 	int it = 0;
 	{
 		for (int i = Index; i < Size() && i != ' '; i++)// increments i to check continuous character spaces unless it 
-			//hits a space character
+														//hits a space character
 		{
 			if (m_word[i] == sub.m_word[it])
 			{
@@ -149,11 +172,3 @@ bool MyString::findIndexSub(int Index, MyString sub)
 	return true;
 	// this function will return true or false whether the argument string is the sub string specified by Index
 }
-char MyString::changeSub(MyString swtch)
-{
-	return 0;
-}
-void MyString::ToC_str()
-{
-
-};
