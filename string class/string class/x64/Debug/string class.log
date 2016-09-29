@@ -1,4 +1,1 @@
-﻿  MyString.cpp
-c:\users\devin.wiggins\documents\github\string-class\string class\string class\mystring.cpp(17): warning C4552: '!=': operator has no effect; expected operator with side-effect
-  string class.vcxproj -> C:\Users\devin.wiggins\Documents\GitHub\String-class\string class\x64\Debug\string class.exe
-  string class.vcxproj -> C:\Users\devin.wiggins\Documents\GitHub\String-class\string class\x64\Debug\string class.pdb (Full PDB)
+﻿  Main.cpp

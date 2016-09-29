@@ -3,6 +3,7 @@ class MyString
 {
 private:
 	char m_word[255];
+	int size;
 public:
 	//Todo
 	MyString() {};

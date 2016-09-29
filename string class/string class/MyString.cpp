@@ -10,19 +10,15 @@ MyString::MyString(char *a)
 	{
 		len++;
 	}
-	for (i = 0; i < len; i++)
+	size = len;
+	for (i = 0; i < size; i++)
 	{
 		m_word[i] = a[i];
 	}
 }
 int MyString::Size()
 {
-	int len = 0;
-	while (m_word[len] != '\0')
-	{
-		len++;
-	}
-	return len;
+	return size;
 }
 char MyString::Index(int index)
 {
