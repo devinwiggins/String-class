@@ -15,6 +15,7 @@ MyString::MyString(char *a)
 	{
 		m_word[i] = a[i];
 	}
+	m_word[size] = '\0';
 }
 int MyString::Size()
 {
@@ -93,8 +94,6 @@ void MyString::ToLower()
 		{
 			m_word[i] = (int)m_word[i] + 32;
 		}
-		else
-			break;
 	}
 			// this is supposed to return the value of 
 			// the letter that i's address is equal to, plus 32.
@@ -107,10 +106,8 @@ void MyString::ToUpper()
 	{
 		if (m_word[i] >= 'a' && m_word[i] <= 'z')
 		{
-			m_word[i] = (int)m_word[i] + 32;
+			m_word[i] = (int)m_word[i] - 32;
 		}
-		else
-			break;
 	}
 }
 
